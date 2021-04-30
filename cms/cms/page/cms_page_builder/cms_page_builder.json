@@ -1,0 +1,23 @@
+{
+ "content": null, 
+ "creation": "2019-02-11 10:57:24.836118", 
+ "docstatus": 0, 
+ "doctype": "Page", 
+ "idx": 0, 
+ "modified": "2019-02-11 10:57:36.175531", 
+ "modified_by": "Administrator", 
+ "module": "CMS", 
+ "name": "cms-page-builder", 
+ "owner": "Administrator", 
+ "page_name": "CMS Page Builder", 
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ], 
+ "script": null, 
+ "standard": "Yes", 
+ "style": null, 
+ "system_page": 1, 
+ "title": "CMS Page Builder"
+}

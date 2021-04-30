@@ -1,0 +1,77 @@
+ {% extends layout_template %} 
+ {% block content %}
+ <div class="title-breadcrumb">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <ol class="breadcrumb">                        
+                        <li><a href="/"><i class="lnr lnr-home"></i></a></li>
+                        <li><a href="#">{{page_title}}</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+{% if use_sections %}
+{% if sections %}{% for item in sections %}
+    {{item.description}}
+    {% if item.custom_style %}
+    <style>
+        {{item.custom_style}}
+    </style>
+    {% endif %}
+    <!-- {% if item.custom_script %}
+    <script>
+        {{item.custom_script}}
+    </script>
+    {% endif %} -->
+{% endfor %}{% endif %}
+{% else %}
+<div class="container-fluid">
+    <div class="row null-mar">
+        <div class="col-md-12 content">
+            <h4>{{page_title}}</h4>
+            {{page_content}}
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    .content{
+        margin: 15px 0;
+        padding: 15px;
+        background: #fff;
+        min-height: 350px;
+        text-align: justify;
+    }
+    @media screen and (min-width: 992px)
+    {
+        .page-section {
+            margin: 0px auto !important;
+            max-width: none !important;
+            padding: 0px !important;
+        }
+    }
+</style>
+{% endif %}
+{% endblock %}
+{% block script %}
+<!-- <script type="text/javascript" src="/assets/cmswebsite/js/jQuery.2.1.4.js"></script> -->
+<script type="text/javascript">
+    // var new1=$('#1').find('h5[id=1]').text();
+    // var new2=$('#2').text();
+    // var new3=$('#3').text();
+    // $("#new1").text(new1)
+    // $("#new2").text(new2)
+    // $("#new3").text(new3)
+    // $("#new1").attr('href',new1)
+    //  $("#new2").attr('href',new2)
+    //   $("#new3").attr('href',new3)    
+</script>
+{% if sections %}{% for item in sections %}
+{% if item.custom_script %}
+    <script>
+        {{item.custom_script}}
+    </script>
+    {% endif %}
+{% endfor %}{% endif %}
+{% endblock %}

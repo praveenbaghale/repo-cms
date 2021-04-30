@@ -1,0 +1,22 @@
+{
+ "align_labels_right": 1, 
+ "creation": "2018-10-06 02:26:56.231709", 
+ "custom_format": 0, 
+ "disabled": 0, 
+ "doc_type": "CMS Page", 
+ "docstatus": 0, 
+ "doctype": "Print Format", 
+ "font": "Default", 
+ "format_data": "[{\"fieldname\": \"print_heading_template\", \"fieldtype\": \"Custom HTML\", \"options\": \"<div class=\\\"print-heading\\\">\\t\\t\\t\\t<h2>CMS<br><small>{{ doc.name }}</small>\\t\\t\\t\\t</h2></div>\"}, {\"fieldtype\": \"Section Break\", \"label\": \"Settings\"}, {\"fieldtype\": \"Column Break\"}, {\"fieldtype\": \"Column Break\"}, {\"print_hide\": 0, \"fieldname\": \"page_title\", \"label\": \"Page Title\"}, {\"print_hide\": 0, \"fieldname\": \"sub_title\", \"label\": \"Sub Title\"}, {\"print_hide\": 0, \"fieldname\": \"category\", \"label\": \"Category\"}, {\"print_hide\": 0, \"fieldname\": \"category_group\", \"label\": \"Category Group\"}, {\"fieldtype\": \"Section Break\", \"label\": \"\"}, {\"fieldtype\": \"Column Break\"}, {\"visible_columns\": [{\"print_hide\": 0, \"fieldname\": \"title\", \"print_width\": \"\"}, {\"print_hide\": 0, \"fieldname\": \"page_id\", \"print_width\": \"\"}, {\"print_hide\": 0, \"fieldname\": \"sub_title\", \"print_width\": \"\"}, {\"print_hide\": 0, \"fieldname\": \"left_image\", \"print_width\": \"\"}, {\"print_hide\": 0, \"fieldname\": \"right_image\", \"print_width\": \"\"}, {\"print_hide\": 0, \"fieldname\": \"description\", \"print_width\": \"\"}, {\"print_hide\": 0, \"fieldname\": \"image\", \"print_width\": \"\"}, {\"print_hide\": 0, \"fieldname\": \"icon_image\", \"print_width\": \"\"}, {\"print_hide\": 0, \"fieldname\": \"icon_class\", \"print_width\": \"\"}, {\"print_hide\": 0, \"fieldname\": \"table_8\", \"print_width\": \"\"}], \"print_hide\": 0, \"fieldname\": \"page_section\", \"label\": \"Page Section\"}, {\"print_hide\": 0, \"fieldname\": \"image\", \"label\": \"Image\"}, {\"print_hide\": 0, \"fieldname\": \"parent_page\", \"label\": \"Parent Page\"}]", 
+ "idx": 0, 
+ "line_breaks": 1, 
+ "modified": "2018-10-06 02:35:24.572873", 
+ "modified_by": "Administrator", 
+ "module": "CMS", 
+ "name": "CMS Print1", 
+ "owner": "Administrator", 
+ "print_format_builder": 0, 
+ "print_format_type": "Server", 
+ "show_section_headings": 1, 
+ "standard": "Yes"
+}

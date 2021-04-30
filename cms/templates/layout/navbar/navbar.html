@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default navbar-main {% if layout_settings.fixed_header %}navbar-fixed-top{% endif %}" role="navigation">
+    <div class="container">
+    	{% if not layout_settings.hide_logo %}
+        <div class="navbar-header">
+            <a class="navbar-brand ellipsis"
+					 href="{{ url_prefix }}{{ home_page or "/"}}">
+					<span>{{ brand_html or (frappe.get_hooks("brand_html") or ["Home"])[0] }}</span>
+				</a>
+            <div class="dropdown">
+                <button class="btn btn-default navbar-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <i class="octicon octicon-three-bars"></i>
+                </button>
+                {% include "templates/layout/navbar/dropdown_items.html" %}
+            </div>
+        </div>
+        {% endif %}
+        <div class="hidden-xs">
+            {% block navbar_items %}
+            {% include "templates/layout/navbar/navbar_items.html" %}
+            {% endblock %}
+        </div>
+    </div>
+</nav>

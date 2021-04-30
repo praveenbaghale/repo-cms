@@ -1,0 +1,136 @@
+<div class="page-sections">
+	<div class="all-section">
+		{% if sections %}{% for item in sections %}
+		<div id="section-{{item.idx}}" class="sections-def" data-name="{{item.name}}">
+			<div class="edit-options">
+				<div class="section-title">{{item.title}}</div>
+				<span class="octicon octicon-code" onclick="add_custom_script(this)"></span>
+				<span class="octicon octicon-gear" onclick="custome_style(this)"></span>
+				<span class="octicon octicon-x" onclick="delete_section(this)"></span>
+			</div>
+			<div class="layout" data-name="{{item.layout}}">
+				{{item.layout_html}}
+			</div>
+			<div class="new-module" onclick="add_module(this)">
+				<div>
+					<span class="octicon octicon-plus"></span> Add New Row
+				</div>
+			</div>
+			<input type="hidden" name="custom_script" id="custom_script" value="{% if item.custom_script %}{{item.custom_script}}{% endif %}" />
+			<input type="hidden" name="custom_css" id="custom_css" value="{% if item.custom_style %}{{item.custom_style}}{% endif %}" />
+		</div>
+		{% endfor %}{% endif %}
+	</div>
+	<div class="new-section" onclick="add_new_section()">
+		<div>
+			<span class="octicon octicon-plus"></span> Add New Section
+		</div>
+	</div>
+</div>
+<div class="test-html-values"></div>
+<style type="text/css">
+	.page-sections{
+		border: 1px solid #ddd;
+    	margin: 60px 15px 10px 10px;
+	}
+	.test-html-values{
+		display: none;
+	}
+	.new-section,.new-module{
+		margin: 10px;
+	    border: 1px dotted #ddd;
+	    text-align: center;
+	    cursor: pointer;
+	}
+	.sections-def{
+		margin: 10px;
+		/*padding: 10px;*/
+		border: 3px solid #ddd;
+	}
+	.sections-def .edit-options{
+		padding: 10px;
+	}
+	.sections-def .layout{
+		padding: 20px 30px;
+	}
+	.sections-def .edit-options{
+		text-align: right;
+	    padding: 10px;
+	    background: #dadada;
+	}
+	.sections-def .edit-options .section-title{
+		float: left;
+	}
+	.sections-def .edit-options span{
+		margin-left: 10px;
+	}
+	.layout-def .row{
+    	margin-left: 0;
+    	margin-right: 0;
+	}
+	.layout-def{
+		padding: 10px;
+	}
+	.layout-def .row div{
+		padding: 5px;
+		background: #ddd;
+		height: 50px;
+	}
+	.layout-def div{
+		background: #ddd;
+		padding: 20px;
+    	text-align: center;
+	}
+	.new-section div,.new-module div{
+		padding: 15px;
+	}
+	.layout .row{
+		border: 3px solid #ddd;
+		/*border-right: 0;*/
+	}
+	.layout .columns{
+		min-height: 50px;
+    	/*border-right: 3px solid #ddd;*/
+    	padding: 10px;
+	}
+	.new-item{
+		text-align: center;
+	    padding: 10px;
+	    border: 1px dotted #ddd;
+	}
+	.new-item,.new-section,.new-module{
+		cursor: pointer;
+	}
+	.comp div{
+		padding: 10px;
+	    text-align: center;
+	    cursor: pointer;
+	    background: #ddd;
+	    margin-bottom: 5px;
+	}
+	.columns .component{
+		display: flex;
+		border: 1px solid #ddd;
+		margin-bottom: 10px;
+	}
+	.columns .component .coop{
+		padding: 10px;
+	    width: 88%;
+	    border-right: 1px solid #ddd;
+	}
+	.columns .component .edit{
+		padding: 10px;
+	    background: #ddd;
+	    cursor: pointer;
+	    width: 12%;
+		text-align: center;
+	}
+	.layout .row-def{
+		margin-bottom: 10px;
+	}
+	.edit-row{
+		background: #ddd;
+	    text-align: right;
+	    padding: 10px;
+	}
+</style>

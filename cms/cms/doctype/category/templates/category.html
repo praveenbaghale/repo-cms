@@ -1,0 +1,101 @@
+ {% extends "templates/baseweb4.html" %} 
+ {% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" style="padding-left: 0;padding-right: 0;">
+            <nav aria-label="breadcrumb" class="bredcome-bg">
+                <ol class="breadcrumb">
+                	{% if Pages %}
+	{% for newsecion in Pages %}
+                    <li class="breadcrumb-item active right-arrow">
+                        <a href="#"><span class="maincontent_main">{{Category}}</span></a>
+                    </li>
+                    <li class="breadcrumb-item " aria-current="page">
+                        <a href="#"><span class="maincontent_0">{{newsecion.name}}</span></a>
+                    </li>
+                    {% endfor %}
+      {% endif %}
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container-floid">
+	{% if Category %}
+
+	{% for newsecion in Category %}
+	
+	
+    <div class="row wrapper-inner-new" >
+        <div class="col-md-12 content-list cont" id="{{loop.index}}">
+        	
+        	
+
+        		
+        	<div class="col-md-5">
+        		 <img alt="Oil platform" data-height="341" data-width="455" data-width-medium-screen="370" data-width-small-screen="358" data-src="{{newsecion.image}}" src="{{newsecion.image}}" class="img-loaded" style="width:100%">
+        	</div>
+
+        	<div class="col-md-7">
+        		<div class="">
+        		    <!-- <p class="eyebrow">{{newsecion.name}}</p> -->
+                    <h3 class="title" style="margin-top:0px">
+                            
+                            <a class="type-article" href="#" style="margin-top:10px">{{newsecion.name}}</a></h3>
+                    <span class="date"> </span>
+                    <p class="description">
+                       {{newsecion.description}}
+                    </p>
+                    
+                </div>
+        	</div>
+        	
+     
+
+        </div> 
+    </div>
+    
+  
+      {% endfor %}
+    {% endif %}
+</div>
+<div class="container-fluid">
+    <div class="row wrapper-inner-new2">
+        <div class="col-md-12" style="display: contents;">
+            <div class="col-md-8" style="padding-left: 0;padding-right: 0;padding-bottom: 50px">
+                <div class="inner">
+                    <h2>Also in&nbsp;Refinery</h2>
+                    <!-- also-in topics -->
+                    <nav class="also-in-topic">
+                    	{% if Category %}
+
+	{% for newsecion in Category %}
+	{% for page in newsecion.Pages %}
+                        <ul>
+                        	
+                            <li class="in-topic-item">
+                                <a id="maincontent_0_pagecontent_0_topiccontent_0_rptAlsoInTopic_aAlsoInImg_0" class="article-img" target="_blank">
+	                                        <img alt="Artic Leadership Environment Oil In Arctic Environment Supporting Image" data-src="{{page.image}}" data-width-medium-screen="240" data-width-small-screen="106" height="196" src="{{page.image}}" width="261" class="img-loaded">
+	                                    </a>
+                                <header class="sub-topic-type">{{page.category}}</header>
+                                <a class="title" href="#">{{page.name}}</a>
+                            </li>
+ 
+                        </ul>
+                        {% endfor %}
+      {% endfor %}
+    {% endif %}
+                    </nav>
+                </div>
+            </div>
+            <div class="col-md-4 bg-related">
+                <h3>Related topics</h3>
+                <ul class="post-1">
+                    <li><a href="#">Environmental drilling initiatives</a></li>
+                    <li><a href="#">Spill Performance</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
